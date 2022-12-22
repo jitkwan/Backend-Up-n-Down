@@ -27,7 +27,7 @@ if (process.env.NODE_ENV !== 'production') {
     app.use(morgan('dev'));
 }
 
-app.use(cors({ credentials: true, origin: 'https://frontend-up-n-down.vercel.app' }
+app.use(cors({ credentials: true, origin: 'https://exercisetracker-up-n-down.vercel.app' }
     ))
 
 app.use(express.json())
