@@ -37,6 +37,7 @@ app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/activities', authenticateUser, activityRouter)
 
 
+
 app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
 
