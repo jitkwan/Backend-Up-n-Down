@@ -2,6 +2,7 @@ import 'express-async-errors'
 import express from 'express'
 import dotenv from 'dotenv'
 import morgan from 'morgan';
+import cors from 'cors'
 import connectDB from './db/connect.js'
 
 
@@ -25,6 +26,9 @@ dotenv.config()
 if (process.env.NODE_ENV !== 'production') {
     app.use(morgan('dev'));
 }
+
+app.use(cors({ credentials: true, origin: 'https://frontend-up-n-down.vercel.app' }
+    ))
 
 app.use(express.json())
 
